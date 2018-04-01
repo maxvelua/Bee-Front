@@ -7,12 +7,20 @@ import PropTypes from "prop-types";
 import './assets/css/default.min.css';
 
 import HomePage from "./components/pages/HomePage";
+import LoginPage from "./components/pages/LoginPage";
 
 const App = ({location, dispatch, history}) => (
     <div className="reactBody">
+        {/*Header*/}
         <div className='content'>
             <Route location={location} path="/home" exact component={HomePage}/>
+            <Route location={location} path="/login" exact component={LoginPage}/>
+            {/*//<Route location={location} path="/register" exact component={RegisterPage}/>*/}
+            {/* Register */}
+            {/* Auth */}
+            {/* User Protected */}
         </div>
+        {/*Footer*/}
     </div>
 );
 
