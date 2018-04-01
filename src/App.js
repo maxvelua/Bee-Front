@@ -8,6 +8,7 @@ import './assets/css/default.min.css';
 
 import HomePage from "./components/pages/HomePage";
 import LoginPage from "./components/pages/LoginPage";
+import RegisterAdminPage from "./components/pages/RegisterAdminPage";
 
 const App = ({location, dispatch, history}) => (
     <div className="reactBody">
@@ -15,7 +16,7 @@ const App = ({location, dispatch, history}) => (
         <div className='content'>
             <Route location={location} path="/home" exact component={HomePage}/>
             <Route location={location} path="/login" exact component={LoginPage}/>
-            {/*//<Route location={location} path="/register" exact component={RegisterPage}/>*/}
+            <Route location={location} path="/register-admin" exact component={RegisterAdminPage}/>
             {/* Register */}
             {/* Auth */}
             {/* User Protected */}
