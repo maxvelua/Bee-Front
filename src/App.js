@@ -6,9 +6,12 @@ import PropTypes from "prop-types";
 
 import './assets/css/default.min.css';
 
+import HomePage from "./components/pages/HomePage";
+
 const App = ({location, dispatch, history}) => (
     <div className="reactBody">
         <div className='content'>
+            <Route location={location} path="/home" exact component={HomePage}/>
         </div>
     </div>
 );
