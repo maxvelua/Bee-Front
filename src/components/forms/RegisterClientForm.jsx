@@ -3,14 +3,17 @@ import {Form, Message} from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
-export default class RegisterForm extends Component {
+export default class RegisterClientForm extends Component {
     state = {
         formData: {
             login: "",
             email: "",
             pass: "",
             name: "",
-            surname: ""
+            surname: "",
+            company_name: "",
+            company_address: "",
+            phone: ""
         },
         loading: false,
         errors: {}
@@ -60,6 +63,12 @@ export default class RegisterForm extends Component {
                                 id="name" name='name' value={formData.name} onChange={this.onFormFieldChange}/>
                     <Form.Input required label='Surname' fluid placeholder='Surname'
                                 id="surname" name='surname' value={formData.surname} onChange={this.onFormFieldChange}/>
+                    <Form.Input required label='Company name' fluid placeholder='Company name'
+                                id="company_name" name='company_name' value={formData.company_name} onChange={this.onFormFieldChange}/>
+                    <Form.Input required label='Company address' fluid placeholder='Company address'
+                                id="company_address" name='company_address' value={formData.company_address} onChange={this.onFormFieldChange}/>
+                    <Form.Input required label='Phone' fluid placeholder='Phone'
+                                id="phone" name='phone' value={formData.phone} onChange={this.onFormFieldChange}/>
                     <Form.Button type='submit' className='registerAdminButton' fluid primary content='Go !'/>
                 </Form>
             </div>
@@ -67,6 +76,6 @@ export default class RegisterForm extends Component {
     }
 }
 
-RegisterForm.propTypes = {
+RegisterClientForm.propTypes = {
     submit: PropTypes.func.isRequired // декларирует ожидаемые параметры
 };

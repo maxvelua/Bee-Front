@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import RegisterForm from '../../forms/RegisterAdminForm';
 import {Grid, Header} from "semantic-ui-react";
-import registerApi from "../../../api/employee";
+import registerApi from "../../../api/admin";
 
-class RegisterEmployeePage extends Component {
+class RegisterAdminPage extends Component {
     submit = async (credentials) => {
         const response = await registerApi.register(credentials); // вызывает функцию запроса на сервер
         console.log(response);
@@ -13,7 +13,7 @@ class RegisterEmployeePage extends Component {
         return (
             <Grid centered container>
                 <Grid.Row>
-                    <Header content='Register employee page' as='h1'/>
+                    <Header content='Register admin page' as='h1'/>
                 </Grid.Row>
 
                 <Grid.Row>
@@ -27,6 +27,6 @@ class RegisterEmployeePage extends Component {
 }
 
 
-RegisterEmployeePage.propTypes = {};
+RegisterAdminPage.propTypes = {};
 
-export default RegisterEmployeePage;
+export default RegisterAdminPage;
