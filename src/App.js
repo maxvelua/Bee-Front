@@ -12,10 +12,12 @@ import RegisterAdminPage from "./components/pages/RegisterAdminPage";
 import RegisterEmployeePage from "./components/pages/RegisterEmployeePage";
 import RegisterClientPage from "./components/pages/RegisterClientPage";
 import UserCabinetPage from "./components/pages/UserCabinetPage";
-import CatalogPage from "./components/pages/CatalogPage";
+import CatalogPage from "./components/pages/CatalogPage/MainCatalogPage/index";
 import PrivateRoute from "./components/subcomponents/PrivateRoute";
 import Navbar from "./components/subcomponents/Navbar";
 import Footer from "./components/subcomponents/Footer";
+
+// TODO make dummy page components for catalogs and beehive management
 
 const App = ({location, dispatch, history, isAuth, userType}) => (
     <div className="reactBody">
@@ -31,7 +33,8 @@ const App = ({location, dispatch, history, isAuth, userType}) => (
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/register-employee" exact component={RegisterEmployeePage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={2} location={location} path="/register-client" exact component={RegisterClientPage}/>
 
-            {/*<PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/catalog" exact component={CatalogPage}/>*/}
+            <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/catalog" exact component={CatalogPage}/>
+
         </div>
         <Footer/>
     </div>
