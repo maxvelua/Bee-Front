@@ -23,7 +23,7 @@ export default class LoginForm extends Component {
             if (!_.isEmpty(errors)) return this.setState({errors: errors}); // выходит из функции и приписывает ошибки
 
             await this.props.submit(formData); // вызывает функцию переданную при вызове компонента вродителе (HomePage)
-            this.setState({loading: false, errors: {}}); // отменяет загрузку состояние на загрузку
+            // this.setState({loading: false, errors: {}}); // отменяет загрузку состояние на загрузку
         } catch (err) {
             const {error} = err.response.data; // вытягивает дату ошибки из ответа от сервера
             this.setState({loading: false, errors: {global: error}}); // и приписывает ее в состояние ошибок в поле глобальных

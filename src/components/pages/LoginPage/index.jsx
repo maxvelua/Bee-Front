@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import LoginForm from '../../forms/LoginForm';
 import PropTypes from 'prop-types';
 import {Grid, Header} from "semantic-ui-react";
-import authApi from '../../../api/auth';
+import {login} from '../../../actions/auth';
+import {connect} from 'react-redux';
 
 class LoginPage extends Component {
     submit = async (credentials) => {
-        const response = await authApi.login(credentials); // вызывает функцию запроса на сервер
-        console.log(response);
-    };
+        await this.props.login(credentials);
+        this.props.history.push('/');
+    }; // вызывает функцию запроса на сервер
 
     render() {
         return (
@@ -28,6 +29,11 @@ class LoginPage extends Component {
 }
 
 
-LoginPage.propTypes = {};
+LoginPage.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired
+    }).isRequired,
+    login: PropTypes.func.isRequired,
+};
 
-export default LoginPage;
+export default connect(null, {login})(LoginPage);
