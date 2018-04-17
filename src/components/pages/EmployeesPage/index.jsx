@@ -6,7 +6,6 @@ export default class EmployeesPage extends Component {
     state = {activeItem: 'emp'};
 
     handleItemClick = (e, {id}) => this.setState({activeItem: id});
-    // TODO (DONE) menu in 2 level pages
     render() {
         const {activeItem} = this.state;
 
@@ -19,7 +18,6 @@ export default class EmployeesPage extends Component {
                     <Menu.Item name='Teams' id='team' active={activeItem === 'team'}
                                onClick={this.handleItemClick}/>
                 </Menu>
-
                 <Segment attached='bottom'>
                     {activeItem}
                 </Segment>
