@@ -16,16 +16,11 @@ class Navbar extends Component {
         const {history} = this.props;
         history.push('/user-cabinet');
     };
-
-    navbarAdminCatalog = () => {
-        const {history} = this.props;
-        history.push('/catalog');
-    };
     // вызывает функцию signout по клику на кнопку
 
     state = {activeItem: 'home'};
 
-    // TODO delete 2 level of Dropdown, make mobile version of admin navbar, test, close feature, push github
+    // TODO (DONE) delete 2 level of Dropdown, make mobile version of admin navbar, test, close feature, push github
 
     getAdminEmpMenu = () =>
         <div>
@@ -42,7 +37,7 @@ class Navbar extends Component {
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/area'}>Area</Dropdown.Item>
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/location'}>Locations</Dropdown.Item>
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/suppliers-types-suppliers'}>Suppliers types / suppliers</Dropdown.Item>
-                                <Dropdown.Item href={mainConfig.mainHost + '/catalog/IoT'}>IoT</Dropdown.Item>
+                                <Dropdown.Item href={mainConfig.mainHost + '/catalog/iot'}>IoT</Dropdown.Item>
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/type-of-beehive'}>Type of Beehive</Dropdown.Item>
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/number-of-frames'}>Number of frames</Dropdown.Item>
                                 <Dropdown.Item href={mainConfig.mainHost + '/catalog/species'}>Species</Dropdown.Item>
@@ -85,7 +80,7 @@ class Navbar extends Component {
                 <Menu>
                     <Dropdown item text='Menu'>
                     <Dropdown.Menu>
-                        <Dropdown.Item href={mainConfig.mainHost + '/catalog'} onClick={this.navbarAdminCatalog} >Catalog</Dropdown.Item>
+                        <Dropdown.Item href={mainConfig.mainHost + '/catalog'}>Catalog</Dropdown.Item>
                         <Dropdown.Item href={mainConfig.mainHost + '/beehives-management'}>Beehives management</Dropdown.Item>
                         <Dropdown.Item href={mainConfig.mainHost + '/dashboard'}>Dashboard</Dropdown.Item>
                         <Dropdown.Item href={mainConfig.mainHost + '/map'}>Map</Dropdown.Item>
