@@ -31,13 +31,13 @@ import TypeOfMedicationPage from "./components/pages/CatalogPage/TypeOfMedicatio
 import LocationPage from "./components/pages/CatalogPage/LocationPage";
 import NumberOfFramesPage from "./components/pages/CatalogPage/NumberOfFramesPage";
 import BoxPage from "./components/pages/BeehivesManagementPages/BoxPage";
-import ClientsPage from "./components/pages/BeehivesManagementPages/ClientsPage";
 import ColoniesPage from "./components/pages/BeehivesManagementPages/ColoniesPage";
-import EmployeesPage from "./components/pages/BeehivesManagementPages/EmployeesPage";
 import IoTBPage from "./components/pages/BeehivesManagementPages/IoTPage";
 import PalletsPage from "./components/pages/BeehivesManagementPages/PalletsPage";
 import QueensPage from "./components/pages/BeehivesManagementPages/QueensPage";
 import BeehivesPage from "./components/pages/BeehivesPage";
+import ClientsPage from "./components/pages/ClientsPage";
+import EmployeesPage from "./components/pages/EmployeesPage";
 
 // TODO (DONE) make dummy page components for catalogs and beehive management
 
@@ -60,6 +60,8 @@ const App = ({location, dispatch, history, isAuth, userType}) => (
             <PrivateRoute auth={isAuth} location={location} path="/map" exact component={MapPage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management" exact component={BeehivesManagementPage}/>
             <PrivateRoute auth={isAuth} location={location} path="/beehives" exact component={BeehivesPage}/>
+            <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/client" exact component={ClientsPage}/>
+            <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/employee" exact component={EmployeesPage}/>
 
             {/*Catalog*/}
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/catalog/region" exact component={RegionPage}/>
@@ -76,9 +78,7 @@ const App = ({location, dispatch, history, isAuth, userType}) => (
 
             {/*Beehives management*/}
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/box" exact component={BoxPage}/>
-            <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/client" exact component={ClientsPage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/colonies" exact component={ColoniesPage}/>
-            <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/employees" exact component={EmployeesPage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/iot" exact component={IoTBPage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/pallets" exact component={PalletsPage}/>
             <PrivateRoute auth={isAuth} userType={userType} permission={1} location={location} path="/beehives-management/queens" exact component={QueensPage}/>

@@ -61,6 +61,9 @@ class Navbar extends Component {
                         </Dropdown>
                     </Menu.Menu>
 
+                    <Menu.Item name='employees' href={mainConfig.mainHost + '/employee'}/>
+                    <Menu.Item name='clients' href={mainConfig.mainHost + '/client'}/>
+
                     <Menu.Menu position='right'>
 
                         <Menu.Item>
@@ -84,6 +87,8 @@ class Navbar extends Component {
                         <Dropdown.Item href={mainConfig.mainHost + '/beehives-management'}>Beehives management</Dropdown.Item>
                         <Dropdown.Item href={mainConfig.mainHost + '/dashboard'}>Dashboard</Dropdown.Item>
                         <Dropdown.Item href={mainConfig.mainHost + '/map'}>Map</Dropdown.Item>
+                        <Dropdown.Item href={mainConfig.mainHost + '/employee'}>Employees</Dropdown.Item>
+                        <Dropdown.Item href={mainConfig.mainHost + '/client'}>Clients</Dropdown.Item>
                     </Dropdown.Menu>
                     </Dropdown>
 
