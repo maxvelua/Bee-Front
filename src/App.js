@@ -24,7 +24,7 @@ import IoTPage from "./components/pages/CatalogPage/IoTPage";
 import NumberOfBeehivePage from "./components/pages/CatalogPage/NumberOfBeehivePage";
 import RegionPage from "./components/pages/CatalogPage/RegionPage";
 import SpeciesPage from "./components/pages/CatalogPage/SpeciesPage";
-import SuppliersTypesSuppliersPage from "./components/pages/CatalogPage/SuppliersTypesSuppliersPage";
+import SuppliersTypesSuppliersPage from "./components/pages/CatalogPage/SuppliersPage";
 import TypeOfBeehivePage from "./components/pages/CatalogPage/TypeOfBeehivePage";
 import TypeOfFoodPage from "./components/pages/CatalogPage/TypeOfFoodPage";
 import TypeOfMedicationPage from "./components/pages/CatalogPage/TypeOfMedicationPage";

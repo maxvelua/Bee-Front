@@ -1,4 +1,4 @@
 export default {
-    apiHost: "https://bee-js.herokuapp.com/api",
+    apiHost: "http://localhost:8080/api",
     mainHost: "http://localhost:3000"
 }

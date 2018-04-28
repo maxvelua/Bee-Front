@@ -11,6 +11,7 @@ import rootReducer from './rootReducer';
 import {loginWithToken} from "./actions/auth";
 import userApi from './api/user';
 import setAuthHeader from './utils/setAuthHeader';
+import catalogApi from './api/catalog';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
